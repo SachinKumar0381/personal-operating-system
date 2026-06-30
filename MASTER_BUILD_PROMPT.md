@@ -49,7 +49,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 2 | Design System | ✅ DONE |
 | 3 | Complete Database Schema | ✅ DONE |
 | 4 | Authentication | ✅ DONE |
-| 5 | App Shell (Layout) | ⬜ TODO |
+| 5 | App Shell (Layout) | ✅ DONE |
 | 6 | Dashboard | ⬜ TODO |
 | 7 | Daily Planner | ⬜ TODO |
 | 8a | Weight Tracker | ⬜ TODO |
@@ -1885,7 +1885,7 @@ git commit -m "feat: authentication — auth.js, register, login, middleware, cr
 # PHASE 5 — App Shell (Layout)
 
 **Milestone:** 0.3  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 4 ✅ DONE
 
 ### Goal
