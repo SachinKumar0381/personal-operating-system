@@ -7,11 +7,307 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Placeholder model — full schema defined in Phase 3
+// ─── AUTH ─────────────────────────────────────────────────────────────────────
+
 model User {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts          Account[]
+  sessions          Session[]
+  plannerTasks      PlannerTask[]
+  weightEntries     WeightEntry[]
+  workoutEntries    WorkoutEntry[]
+  sleepEntries      SleepEntry[]
+  mealEntries       MealEntry[]
+  hairEntries       HairEntry[]
+  smokingEntries    SmokingEntry[]
+  studyEntries      StudyEntry[]
+  dsaProblems       DsaProblem[]
+  systemDesigns     SystemDesignTopic[]
+  jobApplications   JobApplication[]
+  resumeVersions    ResumeVersion[]
+  financeEntries    FinanceEntry[]
+  testSeriesEntries TestSeriesEntry[]
+  settings          UserSettings?
+}
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String   @db.ObjectId
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ─── PLANNER ──────────────────────────────────────────────────────────────────
+
+model PlannerTask {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  description String?
+  category    String?
+  priority    String   @default("medium")
+  status      String   @default("todo")
+  date        DateTime
+  startTime   String?
+  endTime     String?
+  tags        String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── HEALTH ───────────────────────────────────────────────────────────────────
+
+model WeightEntry {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  email     String?  @unique
-  name      String?
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  weight    Float
+  unit      String   @default("kg")
+  notes     String?
+  date      DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model WorkoutEntry {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  type      String
+  duration  Int
+  exercises Json[]
+  notes     String?
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SleepEntry {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bedTime   DateTime
+  wakeTime  DateTime
+  duration  Float
+  quality   Int
+  notes     String?
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model MealEntry {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String   @db.ObjectId
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mealType      String
+  items         Json[]
+  totalCalories Int?
+  notes         String?
+  date          DateTime
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model HairEntry {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String
+  products  String[]
+  notes     String?
+  photos    String[]
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SmokingEntry {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId           String   @db.ObjectId
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cigarettesSmoked Int      @default(0)
+  cravings         Int      @default(0)
+  mood             String?
+  trigger          String?
+  notes            String?
+  date             DateTime
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+// ─── STUDY ────────────────────────────────────────────────────────────────────
+
+model StudyEntry {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject   String
+  topic     String
+  duration  Int
+  notes     String?
+  resources String[]
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DsaProblem {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String    @db.ObjectId
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title           String
+  platform        String
+  difficulty      String
+  category        String
+  status          String
+  url             String?
+  notes           String?
+  timeComplexity  String?
+  spaceComplexity String?
+  solvedAt        DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model SystemDesignTopic {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  status      String
+  concepts    String[]
+  notes       String?
+  resources   String[]
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// ─── CAREER ───────────────────────────────────────────────────────────────────
+
+model JobApplication {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company     String
+  role        String
+  status      String
+  salaryRange String?
+  jobUrl      String?
+  notes       String?
+  appliedAt   DateTime
+  followUpAt  DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  interviewRounds InterviewRound[]
+}
+
+model InterviewRound {
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  applicationId String         @db.ObjectId
+  application   JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  round         String
+  scheduledAt   DateTime?
+  outcome       String?
+  notes         String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model ResumeVersion {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  version   String
+  fileUrl   String?
+  notes     String?
+  isActive  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── FINANCE ──────────────────────────────────────────────────────────────────
+
+model FinanceEntry {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String
+  category    String
+  amount      Float
+  currency    String   @default("INR")
+  description String?
+  date        DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── TEST SERIES ──────────────────────────────────────────────────────────────
+
+model TestSeriesEntry {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module      String
+  status      String
+  priority    String    @default("medium")
+  notes       String?
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// ─── SETTINGS ─────────────────────────────────────────────────────────────────
+
+model UserSettings {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String   @unique @db.ObjectId
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  theme         String   @default("system")
+  timezone      String   @default("Asia/Kolkata")
+  weightUnit    String   @default("kg")
+  notifications Boolean  @default(true)
+  weekStartsOn  String   @default("monday")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }
