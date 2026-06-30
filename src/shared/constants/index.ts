@@ -1,0 +1,45 @@
+export const APP_NAME = "Personal Operating System";
+export const APP_DESCRIPTION = "Life management system for productivity, health, and growth";
+
+export const ROUTES = {
+  HOME: "/",
+  LOGIN: "/login",
+  REGISTER: "/register",
+  DASHBOARD: "/dashboard",
+  PLANNER: "/planner",
+  WEIGHT: "/health/weight",
+  WORKOUT: "/health/workout",
+  SLEEP: "/health/sleep",
+  MEALS: "/health/meals",
+  HAIR: "/health/hair",
+  SMOKING: "/health/smoking",
+  STUDY: "/study",
+  DSA: "/study/dsa",
+  SYSTEM_DESIGN: "/study/system-design",
+  JOBS: "/career/jobs",
+  RESUME: "/career/resume",
+  FINANCE: "/finance",
+  TEST_SERIES: "/test-series",
+  REPORTS: "/reports",
+  SETTINGS: "/settings",
+} as const;
+
+export const QUERY_KEYS = {
+  USER: "user",
+  PLANNER: "planner",
+  WEIGHT: "weight",
+  WORKOUT: "workout",
+  SLEEP: "sleep",
+  MEALS: "meals",
+  HAIR: "hair",
+  SMOKING: "smoking",
+  STUDY: "study",
+  DSA: "dsa",
+  SYSTEM_DESIGN: "system-design",
+  JOBS: "jobs",
+  RESUME: "resume",
+  FINANCE: "finance",
+  TEST_SERIES: "test-series",
+  REPORTS: "reports",
+  SETTINGS: "settings",
+} as const;
