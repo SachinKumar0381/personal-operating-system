@@ -50,7 +50,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 3 | Complete Database Schema | ✅ DONE |
 | 4 | Authentication | ✅ DONE |
 | 5 | App Shell (Layout) | ✅ DONE |
-| 6 | Dashboard | ⬜ TODO |
+| 6 | Dashboard | ✅ DONE |
 | 7 | Daily Planner | ⬜ TODO |
 | 8a | Weight Tracker | ⬜ TODO |
 | 8b | Workout Tracker | ⬜ TODO |
@@ -2087,7 +2087,7 @@ git commit -m "feat: app shell — glass sidebar, navbar, navigation, authentica
 # PHASE 6 — Dashboard
 
 **Milestone:** 0.4  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 5 ✅ DONE
 
 ### Goal
