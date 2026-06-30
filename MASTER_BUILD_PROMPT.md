@@ -46,7 +46,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | Phase | Name | Status |
 |-------|------|--------|
 | 1 | Project Foundation | ✅ DONE |
-| 2 | Design System | ⬜ TODO |
+| 2 | Design System | ✅ DONE |
 | 3 | Complete Database Schema | ⬜ TODO |
 | 4 | Authentication | ⬜ TODO |
 | 5 | App Shell (Layout) | ⬜ TODO |
@@ -633,7 +633,7 @@ git commit -m "feat: project foundation — packages, structure, providers, util
 # PHASE 2 — Design System
 
 **Milestone:** 0.1.2  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 1 ✅ DONE
 
 ### Goal

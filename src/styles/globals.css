@@ -4,29 +4,100 @@
 
 @theme {
   --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+  --animate-scale-in: scale-in 0.2s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@theme inline {
+  /* Color utilities — dynamically reference CSS variables so dark mode works */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* Border radius utilities */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
 }
 
 @layer base {
   :root {
+    /* Light mode — Apple light glass */
     --background: 210 40% 96%;
     --foreground: 222 47% 11%;
+
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
+
     --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
+
     --secondary: 210 40% 90%;
     --secondary-foreground: 222 47% 11%;
+
     --muted: 210 40% 93%;
     --muted-foreground: 215 16% 47%;
+
     --accent: 210 40% 90%;
     --accent-foreground: 222 47% 11%;
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
+
     --border: 214 32% 88%;
     --input: 214 32% 88%;
     --ring: 221 83% 53%;
+
     --radius: 0.75rem;
 
+    /* Glass tokens — light */
     --glass-bg: rgba(255, 255, 255, 0.65);
     --glass-bg-subtle: rgba(255, 255, 255, 0.4);
     --glass-border: rgba(255, 255, 255, 0.7);
@@ -35,42 +106,51 @@
   }
 
   .dark {
+    /* Dark mode — Apple dark glass */
     --background: 222 47% 8%;
     --foreground: 210 40% 96%;
+
     --card: 222 47% 11%;
     --card-foreground: 210 40% 96%;
+
     --primary: 221 83% 60%;
     --primary-foreground: 0 0% 100%;
+
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 96%;
+
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
+
     --accent: 217 33% 17%;
     --accent-foreground: 210 40% 96%;
+
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
+
     --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 221 83% 60%;
 
+    /* Glass tokens — dark */
     --glass-bg: rgba(255, 255, 255, 0.06);
     --glass-bg-subtle: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     --glass-blur: 24px;
   }
-}
 
-@layer base {
   html,
   body {
     height: 100%;
   }
 
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: var(--font-sans);
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  * {
+    @apply border-border;
   }
 }
 
