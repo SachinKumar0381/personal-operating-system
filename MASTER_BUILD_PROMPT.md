@@ -48,7 +48,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 1 | Project Foundation | ✅ DONE |
 | 2 | Design System | ✅ DONE |
 | 3 | Complete Database Schema | ✅ DONE |
-| 4 | Authentication | ⬜ TODO |
+| 4 | Authentication | ✅ DONE |
 | 5 | App Shell (Layout) | ⬜ TODO |
 | 6 | Dashboard | ⬜ TODO |
 | 7 | Daily Planner | ⬜ TODO |
@@ -1581,7 +1581,7 @@ git commit -m "feat: complete mongodb schema — all feature models defined and 
 # PHASE 4 — Authentication
 
 **Milestone:** 0.2  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 3 ✅ DONE
 
 ### Goal
