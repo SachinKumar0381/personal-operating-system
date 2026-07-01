@@ -52,7 +52,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 5 | App Shell (Layout) | ✅ DONE |
 | 6 | Dashboard | ✅ DONE |
 | 7 | Daily Planner | ✅ DONE |
-| 8a | Weight Tracker | ⬜ TODO |
+| 8a | Weight Tracker | ✅ DONE |
 | 8b | Workout Tracker | ⬜ TODO |
 | 8c | Sleep Tracker | ⬜ TODO |
 | 8d | Meal Planner | ⬜ TODO |
@@ -2261,7 +2261,7 @@ git commit -m "feat: daily planner — full CRUD tasks with date navigation, fil
 # PHASE 8a — Weight Tracker
 
 **Milestone:** 0.5  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 7 ✅ DONE
 
 ### Feature Structure
