@@ -59,7 +59,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 8e | Hair Recovery Tracker | ✅ DONE |
 | 8f | Smoking Tracker | ✅ DONE |
 | 9a | Study Tracker | ✅ DONE |
-| 9b | DSA Tracker | ⬜ TODO |
+| 9b | DSA Tracker | ✅ DONE |
 | 9c | System Design Tracker | ⬜ TODO |
 | 10a | Job Switch Tracker | ⬜ TODO |
 | 10b | Resume Versions | ⬜ TODO |
@@ -2375,7 +2375,7 @@ src/features/weight-tracker/
 
 # PHASE 9b — DSA Tracker
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Track DSA problems. Fields: title, platform (LeetCode/GFG/Codeforces), difficulty (Easy/Medium/Hard), category (Arrays/DP/Graphs/Trees/etc.), status (solved/attempted/revisit), URL, notes, time/space complexity.
 
