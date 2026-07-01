@@ -60,7 +60,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 8f | Smoking Tracker | ✅ DONE |
 | 9a | Study Tracker | ✅ DONE |
 | 9b | DSA Tracker | ✅ DONE |
-| 9c | System Design Tracker | ⬜ TODO |
+| 9c | System Design Tracker | ✅ DONE |
 | 10a | Job Switch Tracker | ⬜ TODO |
 | 10b | Resume Versions | ⬜ TODO |
 | 11 | Finance Tracker | ⬜ TODO |
@@ -2391,7 +2391,7 @@ src/features/weight-tracker/
 
 # PHASE 9c — System Design Tracker
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Track system design topics. Fields: title (e.g. "Design Twitter"), status (not_started/in_progress/completed/needs_revision), concepts covered (tags), notes, resources. Progress board view (Kanban-style or list).
 
