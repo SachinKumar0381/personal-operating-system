@@ -58,7 +58,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 8d | Meal Planner | ✅ DONE |
 | 8e | Hair Recovery Tracker | ✅ DONE |
 | 8f | Smoking Tracker | ✅ DONE |
-| 9a | Study Tracker | ⬜ TODO |
+| 9a | Study Tracker | ✅ DONE |
 | 9b | DSA Tracker | ⬜ TODO |
 | 9c | System Design Tracker | ⬜ TODO |
 | 10a | Job Switch Tracker | ⬜ TODO |
@@ -2364,7 +2364,7 @@ src/features/weight-tracker/
 # PHASE 9a — Study Tracker
 
 **Milestone:** 0.6  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 8f ✅ DONE
 
 **Feature**: Log study sessions with subject, topic, duration (minutes), resources, notes. Show total study hours this week. Chart of daily study time. Group by subject.
