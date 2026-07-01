@@ -63,7 +63,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 9c | System Design Tracker | ✅ DONE |
 | 10a | Job Switch Tracker | ✅ DONE |
 | 10b | Resume Versions | ✅ DONE |
-| 11 | Finance Tracker | ⬜ TODO |
+| 11 | Finance Tracker | ✅ DONE |
 | 12 | Test Series Tracker | ⬜ TODO |
 | 13 | Reports & Analytics | ⬜ TODO |
 | 14 | Settings | ⬜ TODO |
@@ -2430,7 +2430,7 @@ src/features/weight-tracker/
 # PHASE 11 — Finance Tracker
 
 **Milestone:** 0.8  
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Track income, expenses, and savings. Fields: type (income/expense/saving), category, amount, currency (INR default), description, date.
 
