@@ -61,7 +61,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 9a | Study Tracker | ✅ DONE |
 | 9b | DSA Tracker | ✅ DONE |
 | 9c | System Design Tracker | ✅ DONE |
-| 10a | Job Switch Tracker | ⬜ TODO |
+| 10a | Job Switch Tracker | ✅ DONE |
 | 10b | Resume Versions | ⬜ TODO |
 | 11 | Finance Tracker | ⬜ TODO |
 | 12 | Test Series Tracker | ⬜ TODO |
@@ -2403,7 +2403,7 @@ src/features/weight-tracker/
 # PHASE 10a — Job Switch Tracker
 
 **Milestone:** 0.7  
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Track job applications. Fields: company, role, status (applied/screening/interview/offer/rejected/withdrawn), salary range, job URL, applied date, follow-up date, notes. Each application can have multiple InterviewRounds.
 
