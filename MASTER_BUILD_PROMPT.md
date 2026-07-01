@@ -57,7 +57,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 8c | Sleep Tracker | ✅ DONE |
 | 8d | Meal Planner | ✅ DONE |
 | 8e | Hair Recovery Tracker | ✅ DONE |
-| 8f | Smoking Tracker | ⬜ TODO |
+| 8f | Smoking Tracker | ✅ DONE |
 | 9a | Study Tracker | ⬜ TODO |
 | 9b | DSA Tracker | ⬜ TODO |
 | 9c | System Design Tracker | ⬜ TODO |
@@ -2352,7 +2352,7 @@ src/features/weight-tracker/
 
 # PHASE 8f — Smoking Tracker
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Log daily cigarettes smoked, cravings resisted, mood, trigger. Show 30-day trend chart (cigarettes per day). Show streak (days with 0 cigarettes). Motivational stat: "You resisted X cravings this week."
 
