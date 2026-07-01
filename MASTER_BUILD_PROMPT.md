@@ -53,7 +53,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 6 | Dashboard | ✅ DONE |
 | 7 | Daily Planner | ✅ DONE |
 | 8a | Weight Tracker | ✅ DONE |
-| 8b | Workout Tracker | ⬜ TODO |
+| 8b | Workout Tracker | ✅ DONE |
 | 8c | Sleep Tracker | ⬜ TODO |
 | 8d | Meal Planner | ⬜ TODO |
 | 8e | Hair Recovery Tracker | ⬜ TODO |
@@ -2310,7 +2310,7 @@ src/features/weight-tracker/
 
 # PHASE 8b — Workout Tracker
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Log workout sessions with name, type (strength/cardio/yoga/mixed), duration (minutes), exercises array (each: name, sets, reps, weight/duration), and notes.
 
