@@ -51,7 +51,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 4 | Authentication | ✅ DONE |
 | 5 | App Shell (Layout) | ✅ DONE |
 | 6 | Dashboard | ✅ DONE |
-| 7 | Daily Planner | ⬜ TODO |
+| 7 | Daily Planner | ✅ DONE |
 | 8a | Weight Tracker | ⬜ TODO |
 | 8b | Workout Tracker | ⬜ TODO |
 | 8c | Sleep Tracker | ⬜ TODO |
@@ -2169,7 +2169,7 @@ git commit -m "feat: dashboard — welcome section, stat cards, quick access gri
 # PHASE 7 — Daily Planner
 
 **Milestone:** 0.4.1  
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Pre-requisite:** Phase 6 ✅ DONE
 
 ### Goal
