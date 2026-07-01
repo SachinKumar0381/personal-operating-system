@@ -55,7 +55,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 8a | Weight Tracker | ✅ DONE |
 | 8b | Workout Tracker | ✅ DONE |
 | 8c | Sleep Tracker | ✅ DONE |
-| 8d | Meal Planner | ⬜ TODO |
+| 8d | Meal Planner | ✅ DONE |
 | 8e | Hair Recovery Tracker | ⬜ TODO |
 | 8f | Smoking Tracker | ⬜ TODO |
 | 9a | Study Tracker | ⬜ TODO |
@@ -2332,7 +2332,7 @@ src/features/weight-tracker/
 
 # PHASE 8d — Meal Planner
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Log meals by type (breakfast/lunch/dinner/snack). Each meal has items array (name, calories, protein, carbs, fat). Show daily calorie total. Allow adding multiple meals per day.
 
