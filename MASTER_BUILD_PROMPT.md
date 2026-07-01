@@ -54,7 +54,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 7 | Daily Planner | ✅ DONE |
 | 8a | Weight Tracker | ✅ DONE |
 | 8b | Workout Tracker | ✅ DONE |
-| 8c | Sleep Tracker | ⬜ TODO |
+| 8c | Sleep Tracker | ✅ DONE |
 | 8d | Meal Planner | ⬜ TODO |
 | 8e | Hair Recovery Tracker | ⬜ TODO |
 | 8f | Smoking Tracker | ⬜ TODO |
@@ -2322,7 +2322,7 @@ src/features/weight-tracker/
 
 # PHASE 8c — Sleep Tracker
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Log bed time, wake time (DateTime pickers). Auto-calculate duration. Rate sleep quality 1–5. Show average sleep this week. Chart showing sleep duration over last 14 days.
 
