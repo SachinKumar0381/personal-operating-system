@@ -56,7 +56,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 8b | Workout Tracker | ✅ DONE |
 | 8c | Sleep Tracker | ✅ DONE |
 | 8d | Meal Planner | ✅ DONE |
-| 8e | Hair Recovery Tracker | ⬜ TODO |
+| 8e | Hair Recovery Tracker | ✅ DONE |
 | 8f | Smoking Tracker | ⬜ TODO |
 | 9a | Study Tracker | ⬜ TODO |
 | 9b | DSA Tracker | ⬜ TODO |
@@ -2342,7 +2342,7 @@ src/features/weight-tracker/
 
 # PHASE 8e — Hair Recovery Tracker
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Log hair care activities — type (oil/wash/treatment/supplement), products used (tag input), notes. Timeline view of entries. Photo upload (store URL, implement upload in Phase 15).
 
