@@ -62,7 +62,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 9b | DSA Tracker | ✅ DONE |
 | 9c | System Design Tracker | ✅ DONE |
 | 10a | Job Switch Tracker | ✅ DONE |
-| 10b | Resume Versions | ⬜ TODO |
+| 10b | Resume Versions | ✅ DONE |
 | 11 | Finance Tracker | ⬜ TODO |
 | 12 | Test Series Tracker | ⬜ TODO |
 | 13 | Reports & Analytics | ⬜ TODO |
@@ -2418,7 +2418,7 @@ src/features/weight-tracker/
 
 # PHASE 10b — Resume Versions
 
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 **Feature**: Manage multiple resume versions. Fields: version name, file URL, notes, active status. Show list of versions, mark one as active, link to file. (File upload in Phase 15.)
 
