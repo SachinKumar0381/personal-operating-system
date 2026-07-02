@@ -65,7 +65,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 10b | Resume Versions | ✅ DONE |
 | 11 | Finance Tracker | ✅ DONE |
 | 12 | Test Series Tracker | ✅ DONE |
-| 13 | Reports & Analytics | ⬜ TODO |
+| 13 | Reports & Analytics | ✅ DONE |
 | 14 | Settings | ⬜ TODO |
 | 15 | Production & Deployment | ⬜ TODO |
 
@@ -2466,7 +2466,7 @@ src/features/weight-tracker/
 # PHASE 13 — Reports & Analytics
 
 **Milestone:** 0.10  
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 ### Goal
 Aggregate data across all features to provide weekly and monthly insights.
