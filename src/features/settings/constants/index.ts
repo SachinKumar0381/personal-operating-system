@@ -1,0 +1,17 @@
+export const TIMEZONES = [
+  { value: "Asia/Kolkata", label: "India (IST, UTC+5:30)" },
+  { value: "UTC", label: "UTC (UTC+0)" },
+  { value: "America/New_York", label: "Eastern Time (UTC-5/−4)" },
+  { value: "America/Chicago", label: "Central Time (UTC-6/−5)" },
+  { value: "America/Denver", label: "Mountain Time (UTC-7/−6)" },
+  { value: "America/Los_Angeles", label: "Pacific Time (UTC-8/−7)" },
+  { value: "Europe/London", label: "London (GMT/BST)" },
+  { value: "Europe/Paris", label: "Paris (CET/CEST)" },
+  { value: "Europe/Berlin", label: "Berlin (CET/CEST)" },
+  { value: "Asia/Dubai", label: "Dubai (UAE, UTC+4)" },
+  { value: "Asia/Singapore", label: "Singapore (SGT, UTC+8)" },
+  { value: "Asia/Tokyo", label: "Tokyo (JST, UTC+9)" },
+  { value: "Asia/Shanghai", label: "Shanghai (CST, UTC+8)" },
+  { value: "Australia/Sydney", label: "Sydney (AEST/AEDT)" },
+  { value: "Pacific/Auckland", label: "Auckland (NZST/NZDT)" },
+] as const;

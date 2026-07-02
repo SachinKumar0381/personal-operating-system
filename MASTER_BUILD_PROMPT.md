@@ -66,7 +66,7 @@ You are building **Personal Operating System (POS)** — a production-grade, ful
 | 11 | Finance Tracker | ✅ DONE |
 | 12 | Test Series Tracker | ✅ DONE |
 | 13 | Reports & Analytics | ✅ DONE |
-| 14 | Settings | ⬜ TODO |
+| 14 | Settings | ✅ DONE |
 | 15 | Production & Deployment | ⬜ TODO |
 
 ---
@@ -2489,7 +2489,7 @@ Aggregate data across all features to provide weekly and monthly insights.
 # PHASE 14 — Settings
 
 **Milestone:** Post-Reports  
-**Status:** ⬜ TODO
+**Status:** ✅ DONE
 
 ### Goal
 User preferences stored in `UserSettings` MongoDB document.
